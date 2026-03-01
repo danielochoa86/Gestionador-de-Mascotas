@@ -7,7 +7,7 @@ public class Mascota {
 
 
     //Constructores
-    public Mascota(int id, String nombre, String especie, Estados estado, Dispositivo dispositivo) {
+    public Mascota(int id, String nombre, String especie, Estados estado) {
         Id = id;
         this.nombre = nombre;
         this.especie = especie;
@@ -57,4 +57,11 @@ public class Mascota {
     public void setDispositivo(Dispositivo dispositivo) {
         this.dispositivo = dispositivo;
     }
+
+    //Asociar dispositivo con la mascota
+    public void linkDevice(Dispositivo device){
+        this.dispositivo = device;
+    }
+
+
 }
