@@ -1,4 +1,4 @@
-public enum Estados {
+public enum Estados_Mascota {
     REGISTRADO,
     ACTIVO,
     NO_LOCALIZADO,

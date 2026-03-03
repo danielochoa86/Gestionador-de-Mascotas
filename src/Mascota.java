@@ -2,12 +2,12 @@ public class Mascota {
     private int Id;
     private String nombre;
     private String especie;
-    private Estados estado;
+    private Estados_Mascota estado;
     private Dispositivo dispositivo;
 
 
     //Constructores
-    public Mascota(int id, String nombre, String especie, Estados estado) {
+    public Mascota(int id, String nombre, String especie, Estados_Mascota estado) {
         Id = id;
         this.nombre = nombre;
         this.especie = especie;
@@ -28,7 +28,7 @@ public class Mascota {
         return especie;
     }
 
-    public Estados getEstado() {
+    public Estados_Mascota getEstado() {
         return estado;
     }
 
@@ -50,12 +50,24 @@ public class Mascota {
         this.especie = especie;
     }
 
-    public void setEstado(Estados estado) {
+    public void setEstado(Estados_Mascota estado) {
         this.estado = estado;
     }
 
     public void setDispositivo(Dispositivo dispositivo) {
         this.dispositivo = dispositivo;
+    }
+
+    //******************************************
+
+    public String toString(){
+        String deviceinfo = (dispositivo == null)
+                ? "Sin asignar"
+                : String.valueOf(dispositivo.getDevice_id());
+        return "Especie: " + especie +
+                "\nNombre: " + nombre +
+                "\nEstado: " + estado +
+                "\nID Dispositivo: " + deviceinfo;
     }
 
     //Asociar dispositivo con la mascota
