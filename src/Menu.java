@@ -5,7 +5,6 @@ import java.util.*;
 public class Menu {
 
     private Scanner sc;
-    private ArrayList<String> opciones = new ArrayList<String>();
     private ServicioMascota service;
 
     public Menu(ServicioMascota service) {
@@ -44,7 +43,7 @@ public class Menu {
                 "se le solicita para registrar a su mascota.");
         String petSpec = userInput("Especie: ");
         String petName = userInput("Nombre de las mascota: ");
-        Mascota m = service.registrarMascota(petName, petSpec, Estados_Mascota.REGISTRADO);
+        Mascota m = service.registrarMascota(petName, petSpec, EstadoMascota.REGISTRADO);
         System.out.println("Registrada: " + m);
     }
 

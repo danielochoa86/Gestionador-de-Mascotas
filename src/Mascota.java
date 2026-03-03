@@ -1,14 +1,14 @@
 public class Mascota {
-    private int Id;
+    private int id;
     private String nombre;
     private String especie;
-    private Estados_Mascota estado;
+    private EstadoMascota estado;
     private Dispositivo dispositivo;
 
 
     //Constructores
-    public Mascota(int id, String nombre, String especie, Estados_Mascota estado) {
-        Id = id;
+    public Mascota(int id, String nombre, String especie, EstadoMascota estado) {
+        id = id;
         this.nombre = nombre;
         this.especie = especie;
         this.estado = estado;
@@ -17,7 +17,7 @@ public class Mascota {
     //******************************************
     //getters
     public int getId() {
-        return Id;
+        return id;
     }
 
     public String getNombre() {
@@ -28,7 +28,7 @@ public class Mascota {
         return especie;
     }
 
-    public Estados_Mascota getEstado() {
+    public EstadoMascota getEstado() {
         return estado;
     }
 
@@ -38,10 +38,6 @@ public class Mascota {
 
     //******************************************
     //setters
-    public void setId(int id) {
-        Id = id;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -50,7 +46,7 @@ public class Mascota {
         this.especie = especie;
     }
 
-    public void setEstado(Estados_Mascota estado) {
+    public void setEstado(EstadoMascota estado) {
         this.estado = estado;
     }
 

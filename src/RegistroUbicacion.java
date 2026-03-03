@@ -1,12 +1,12 @@
 import java.time.LocalDateTime;
 
-public class Registros {
+public class RegistroUbicacion {
     private int log_id;
     private LocalDateTime logtimestamp;
     private double latitud;
     private double longitud;
 
-    Registros(int log_id, LocalDateTime logtimestamp, double latitud, double longitud) {
+    RegistroUbicacion(int log_id, LocalDateTime logtimestamp, double latitud, double longitud) {
         this.log_id = log_id;
         this.logtimestamp = logtimestamp;
         this.latitud = latitud;

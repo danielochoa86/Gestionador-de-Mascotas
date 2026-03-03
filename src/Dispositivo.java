@@ -6,7 +6,7 @@ public class Dispositivo {
     private int device_id;
     private int logcounter;
     private EstadosDispositivo devicestatus;
-    private ArrayList<Registros> registros;
+    private ArrayList<RegistroUbicacion> registros;
 
     //constructor
     public Dispositivo(int device_id, EstadosDispositivo devicestatus) {
@@ -18,7 +18,7 @@ public class Dispositivo {
 
     //registros de ubicación
     public void log(double latitud, double longitud){
-        Registros newlog = new Registros(
+        RegistroUbicacion newlog = new RegistroUbicacion(
                                 logcounter++,
                                 LocalDateTime.now(),
                                 latitud,
@@ -27,7 +27,7 @@ public class Dispositivo {
     }
 
     //getter
-    public ArrayList<Registros> getRegistros(){
+    public ArrayList<RegistroUbicacion> getRegistros(){
         return registros;
     }
 
@@ -47,7 +47,7 @@ public class Dispositivo {
         StringBuilder sb = new StringBuilder();
         sb.append("Dispositivo: ").append(device_id).append("\n");
         sb.append("Registros:\n");
-            for (Registros r : registros){
+            for (RegistroUbicacion r : registros){
                 sb.append("   ").append(r).append("\n");
             }
         return sb.toString();

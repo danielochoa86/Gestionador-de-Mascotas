@@ -7,7 +7,7 @@ public class ServicioMascota {
     public int deviceCounter = 1;
 
     //método para registrar mascota y agregarla al arraylist
-    public Mascota registrarMascota(String nombre, String especie, Estados_Mascota estado){
+    public Mascota registrarMascota(String nombre, String especie, EstadoMascota estado){
         Mascota m = new Mascota(mascotaCounter++,nombre,especie,estado);
         mascotas.add(m);
         return m;
